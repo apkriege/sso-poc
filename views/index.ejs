@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Express • TodoMVC</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+  <section class="welcome">
+    <section>
+      <% if(user) { %>
+        <h2>Welcome: <%= user.email || user.username || user.name %>
+        </h2>
+        <% } %>
+
+      <% if(!user) { %>
+        <h3>Must be logged in to the system</h3>
+        <% } %>
+      <a class="button" href="/login">Go back to login</a>
+    </section>
+  </section>
+</body>
+
+</html>
